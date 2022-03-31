@@ -19,7 +19,7 @@ class Solution:
             adj_list[v2].append(v1)
 
         # use dfs to find if there is a path from source to destination
-        # time complexity: O(V + E)
+        # time complexity: O(V + E) where V is the number of vertices and E is the number of edges
         # space complexity: O(V)
         def dfs(node, d):
             visited[node] = True
