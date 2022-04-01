@@ -4,9 +4,10 @@ from typing import List
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
 
-        # time - O(nlog(n)), Space - O(1)
+        # sort list ascending order to get repeating numbers sequentially
         sorted_nums = sorted(nums)
         for i in range(1, len(nums)):
+            # if previous number same as current number,return True
             if sorted_nums[i] == sorted_nums[i - 1]:
                 return True
         return False
